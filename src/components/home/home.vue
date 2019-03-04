@@ -1,13 +1,27 @@
 <template>
-<div>
+  <div>
         <HomeheadComponent></HomeheadComponent>
-      <FootComponent></FootComponent>
-      </div>
+        <AboutComponent> </AboutComponent>
+        <CopyrightsComponent></CopyrightsComponent>
+        <GalleryComponent></GalleryComponent>
+        <BlogComponent></BlogComponent>
+        <CfamilyComponent></CfamilyComponent>
+
+        <FootComponent></FootComponent>
+        <CopyComponent></CopyComponent>
+   </div>
 </template>
 
 <script>
-import BannerComponent from '../common/banner';
+// import BannerComponent from '../common/banner';
 import HomeheadComponent from './homehead';
+import AboutComponent from './about';
+
+import CopyrightsComponent from './copyrights';
+import GalleryComponent from './gallery';
+import BlogComponent from './blog';
+import CfamilyComponent from './c-family';
+import CopyComponent from '../common/copy';
 import FootComponent from '../common/foot';
 export default {
   data () {
@@ -16,8 +30,14 @@ export default {
     }
   },
   components:{
-    BannerComponent,
+    // BannerComponent,
     HomeheadComponent,
+    AboutComponent,
+    CopyrightsComponent,
+    GalleryComponent,
+    BlogComponent,
+    CfamilyComponent,
+    CopyComponent,
     FootComponent,
   }
 }
