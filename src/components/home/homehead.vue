@@ -1,6 +1,6 @@
 <template>
   <div id="home" class="header">
-	<HeadComponent></HeadComponent>
+	<HeadComponent headIndex=0></HeadComponent>
   <BannerComponent></BannerComponent>
 		</div>
 </template>
@@ -13,9 +13,9 @@ data:function(){
 
   }
 },
-components:{
-  HeadComponent,
-  BannerComponent
-}
+  components:{
+    HeadComponent,
+    BannerComponent
+  }
 }
 </script>

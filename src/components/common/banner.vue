@@ -180,13 +180,11 @@ this.$set(this.ulSize,'transition',"0.6s");
         this.move(0)
         },
         autoPlay:function(time){
-            console.log("start")
           this.timer=setInterval(()=>{
               this.move(1)
           },3000)
         },
         stopPlay:function(){
-          console.log("stop")
               clearInterval(this.timer)
         }
     }

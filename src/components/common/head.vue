@@ -2,18 +2,15 @@
  	<div class="header-bottom">
 			<div class="container">
 				<div class="logo">
-					<a href="index.html"><h1>Gat<span>o</span></h1></a>
+					 <router-link to="/index"><h1>Gat<span>o</span></h1></router-link>
 				</div>
 				<span class="menu"></span>
 				<div class="top-menu">
 					<ul>
 					<nav>
-						<li><a class="active" href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="404.html">SERVICES</a></li>
-						<li><a href="portfolio.html">PORTFOLIO</a></li>
-					     <li><a href="#blog" class="scroll">BLOG</a></li>
-						<li><a href="contact.html">Contact</a></li>
+            <li v-for="(item,index) in headArr">
+                <router-link  :to="item.link"   :class="{active:(index==headIndex)}">{{item.title}}</router-link>
+            </li>
 					</nav>
 					</ul>
 				</div>
@@ -24,10 +21,20 @@
 </template>
 <script>
 export default {
-data:function(){
-  return {
-
-  }
-}
+    data:function(){
+      return {
+          headArr:[
+            {title:'Home',link:"/index"},
+            {title:'About',link:"/about"},
+            {title:'SERVICES',link:"/index"},
+            {title:'PORTFOLIO',link:"/index"},
+            {title:'BLOG',link:"/index"},
+            {title:'Contact',link:"/index"},
+          ]
+      }
+    },
+    props:{
+      headIndex:String,
+    }
 }
 </script>
